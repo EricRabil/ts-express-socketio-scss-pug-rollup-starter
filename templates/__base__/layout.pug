@@ -1,0 +1,12 @@
+html
+    head
+        title BBDash
+        block styles
+            link(rel='stylesheet' href='/css/style.css')
+    body
+        block content
+        block scripts
+            if env.NODE_ENV === 'development'
+                script(src='http://localhost:8080/client-dist/script.js')
+            else
+                script(src='/js/script.js')
